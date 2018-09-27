@@ -1,24 +1,24 @@
-'use strict';
+"use strict";
 
 var React = require('react');
 
 var About = React.createClass({
 	statics: {
-		willTrasitionTo: function(transition, params, query, callback) {
+		willTransitionTo: function(transition, params, query, callback) {
 			if (!confirm('Are you sure you want to read a page that\'s this boring?')) {
 				transition.about();
 			} else {
 				callback();
 			}
 		},
-
-		willTrasitionFrom: function(transition, component) {
+		
+		willTransitionFrom: function(transition, component) {
 			if (!confirm('Are you sure you want to leave a page that\'s this exciting?')) {
 				transition.about();
 			}
 		}
 	},
-	render: function() {
+	render: function () {
 		return (
 			<div>
 				<h1>About</h1>
@@ -35,7 +35,7 @@ var About = React.createClass({
 					</ul>
 				</p>
 			</div>
-		);
+		); 
 	}
 });
 
